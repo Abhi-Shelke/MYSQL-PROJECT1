@@ -1,0 +1,263 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22000}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 create database project;\par
+\par
+use project;\par
+\par
+create table ipl_players(player_id int primary key,player_name varchar(255),jersey_no int,dob date,playing_role varchar(255));\par
+\par
+insert into ipl_players values(1,'VIRAT KOHLI',18,'1998-11-05','BATSMAN');\par
+\par
+create table ipl_auction(auction_id int auto_increment primary key,player_id int,base_price varchar(255),selling_price varchar(255),Team varchar(255),foreign key (player_id) references ipl_players(player_id));\par
+\par
+insert into ipl_auction values(101,1,'2 CR','17 CR','RCB');\par
+\par
+insert into ipl_players values(2,'ABHI SHELKE',21,'1999-12-21','ALL ROUNDER'),\par
+    (3,'M.S DHONI',7,'1981-07-07','WK BATSMAN'),\par
+    (4,'ROHIT SHARMA',45,'1987-04-30','BATSMAN'),\par
+    (5,'K.L RAHUL',1,'1992-04-18','BATSMAN'),\par
+    (6,'SURYAKUMAR YADAV',63,'1990-09-14','BATSMAN');\par
+ \par
+insert into ipl_players(player_id,player_name,dob,playing_role) values(7,'MAYANK AGARWAL','1991-02-16','WK BATSMAN'),\par
+    (8,'RAVI ASHWIN','1986-09-17','SPIN BOWLER'),\par
+    (9,'SHRIKHAR BHARAT','1993-03-10','WK BATSMAN'),\par
+    (10,'RAVI BISHNOI','2000-09-05','SPIN BOWLER'),\par
+    (11,'JASPRIT BUMRAH','1993-12-06','FAST BOWLER'),\par
+    (12,'YUZI CHAHAL','1990-07-23','SPIN BOWLER'),\par
+    (13,'DEEPAK CHAHAR','1992-08-07','FAST BOWLER'),\par
+    (14,'SHIKHAR DHAWAN','1985-12-05','BATSMAN'),\par
+    (15,'RUTURAJ GAIKWAD','1997-01-31','BATSMAN'),\par
+    (16,'SHUBHMAN GILL','1999-09-08','BATSMAN'),\par
+    (17,'DEEPAK HOODA','1995-04-19','BATSMAN'),\par
+    (18,'SHREYASH IYER','1994-12-06','BATSMAN'),\par
+    (19,'VYANKATESH IYER','1994-12-25','BATSMAN'),\par
+    (20,'RAVINDRA JADEJA','1988-12-06','ALL ROUNDER'),\par
+    (21,'DINESH KARTHIK','1985-06-01','WK BATSMAN'),\par
+    (22,'ISHAN KISHAN','1998-07-18','WK BATSMAN'),\par
+    (23,'AVESH KHAN','1996-12-13','MEDIUM FAST BOWLER'),\par
+    (24,'SAHRUKH KHAN','1995-05-27','ALL ROUNDER'),\par
+    (25,'PRASIDH KRISHNA','1996-02-19','MEDIUM FAST BOWLER'),\par
+    (26,'BHUVNESHWAR KUMAR','1990-12-05','MEDIUM FAST BOWLER'),\par
+    (27,'UMRAN MALIK','1999-11-22','FAST BOWLER'),\par
+    (28,'HARDIK PANDYA','1993-10-11','ALL ROUNDER'),\par
+    (29,'KRUNAL PANDYA','1991-05-11','ALL ROUNDER'),\par
+    (30,'RISHABH PANT','1997-10-04','WK BATSMAN'),\par
+    (31,'AXAR PATEL','1994-01-20','ALL ROUNDER'),\par
+    (32,'HARSHAL PATEL','1990-11-23','ALL ROUNDER'),\par
+    (33,'CHETESHWAR PUJARA','1988-01-25','BATSMAN'),\par
+    (34,'AJINKYA RAHANE','1988-06-05','BATSMAN'),\par
+    (35,'WRIDHIMAN SAHA','1984-10-24','BATSMAN'),\par
+    (36,'SANJU SAMSON','1994-11-11','BATSMAN'),\par
+    (37,'MOHMMAD SHAMI','1990-03-09','MEDIUM FAST BOWLER'),\par
+    (38,'ISHANT SHARMA','1988-09-02','MEDIUM FAST BOWLER'),\par
+    (39,'ARSHDEEP SINGH','1999-02-05','MEDIUM FAST BOWLER'),\par
+    (40,'SHARDUL THAKUR','1995-10-05','FAST BOWLER'),\par
+    (41,'WASHINGTON SUNDER','1997-12-25','MEDIUM FAST BOWLER'),\par
+    (42,'RAHUL TRIPATHI','1996-12-22','BATSMAN'),\par
+    (43,'HANUMA VIHARI','1990-11-12','BATSMAN'),\par
+    (44,'JAYANT YADAV','1990-10-12','SPIN BOWLER'),\par
+    (45,'KULDEEP YADAV','1992-02-18','SPIN BOWLER'),\par
+    (46,'UMESH YADAV','1991-03-28','FAST BOWLER'),\par
+    (47,'MOHMMAD NABI','1991-04-28','SPIN BOWLER'),\par
+    (48,'MUJIB UR RAHMAN','1995-04-28','SPIN BOWLER'),\par
+    (49,'RASHID KHAN','1998-09-20','SPIN BOWLER'),\par
+    (50,'PAT CUMMINS','1993-05-08','FAST BOWLER'),\par
+    (51,'ARON FINCH','1986-11-17','BATSMAN'),\par
+    (52,'TIM DEVID','1996-03-16','ALL ROUNDER'),\par
+    (53,'JOSH HAZELWOOD','1991-01-08','MEDIUM FAST BOWLER'),\par
+    (54,'GLEN MAXWELL','1988-10-14','ALL ROUNDER'),\par
+    (55,'MITCHELL STARK','1990-01-30','FAST BOWLER'),\par
+    (56,'MITCHELL MARSH','1992-02-26','ALL ROUNDER'),\par
+    (57,'STEVE SMITH','1989-06-02','BATSMAN'),\par
+    (58,'MARCUS STOINIS','1989-08-16','ALL ROUNDER'),\par
+    (59,'MATTHEW WADE','1987-12-26','BATSMAN'),\par
+    (60,'DAVID WARNER','1986-10-27','BATSMAN'),\par
+    (61,'ADAM ZAMPA','1992-03-31','SPIN BOWLER'),\par
+    (62,'AB DE VILLIERS','1984-02-17','BATSMAN'),\par
+    (63,'QUINTON DE KOCK','1992-12-17','WK BATSMAN'),\par
+    (64,'DAVID MILLER','1989-06-10','BATSMAN'),\par
+    (65,'LUNGI NGIDI','1996-08-12','FAST BOWLER'),\par
+    (66,'KAGISO RABADA','1996-08-19','FAST BOWLER'),\par
+    (67,'CHRIS GAYLE','1979-09-21','BATSMAN'),\par
+    (68,'KIERON POLLARD','1987-05-12','ALL ROUNDER'),\par
+    (69,'D.J BRAVO','1983-10-07','FAST BOWLER'),\par
+    (70,'ANDRE RUSSEL','1988-04-29','ALL ROUNDER'),\par
+    (71,'SUNIL NARAINE','1988-05-26','SPIN BOWLER'),\par
+    (72,'JASON HOLDER','1990-05-26','ALL ROUNDER'),\par
+    (73,'KARLOS BREATHWET','1990-07-16','BATSMAN'),\par
+    (74,'EVIN LEVIS','1995-07-16','BATSMAN'),\par
+    (75,'NIKOLAS POORAN','1995-10-02','WK BATSMAN'),\par
+    (76,'SHIMRON HETYRE','1996-03-02','WK BATSMAN'),\par
+    (77,'BEN STOKES','1991-06-04','ALL ROUNDER'),\par
+    (78,'JOS BUTTLER','1990-09-08','BATSMAN'),\par
+    (79,'MOEEN ALI','1987-06-18','ALL ROUNDER'),\par
+    (80,'JOFRA ARCHER','1995-04-1','FAST BOWLER'),\par
+    (81,'JONNY BAIRSTOW','1989-09-26','WK BATSMAN'),\par
+    (82,'SAM CURRAN','1998-06-03','ALL ROUNDER'),\par
+    (83,'CHRIS JORDEN','1991-05-03','MEDIUM FAST BOWLER'),\par
+    (84,'JOE ROOT','1990-12-30','BATSMAN'),\par
+    (85,'JOSON ROY','1990-07-21','BATSMAN'),\par
+    (86,'DEVDUTT PADIKAL','1997-05-21','BATSMAN'),\par
+    (87,'RAJAT PATIDAR','1995-05-27','WK BATSMAN');\par
+    \par
+    select * from ipl_players;\par
+\par
+insert into ipl_auction(player_id,base_price,selling_price,team)\par
+values\par
+(2,'2 CR','15 CR','RCB'),\par
+(3,'2 CR','16 CR','CSK'),\par
+(4,'2 CR','16 CR','MI'),\par
+(5,'2 CR','15 CR','LSG'),\par
+(6,'2 CR','14 CR','MI'),\par
+(7,'2 CR','4 CR','KXIP'),\par
+(8,'2 CR','7 CR','RR'),\par
+(9,'20 L','2 CR','RCB'),\par
+(10,'20 L','2 CR','KXIP'),\par
+(11,'2 CR','13 CR','MI'),\par
+(12,'2 CR','12 CR','RCB'),\par
+(13,'2 CR','3CR','CSK'),\par
+(14,'2 CR','7 CR','DC'),\par
+(15,'20 L','4 CR','CSK'),\par
+(16,'2 CR','3 CR','GT'),\par
+(17,'2 CR','2 CR','LSG'),\par
+(18,'2 CR','5 CR','KKR'),\par
+(19,'20 L','3 CR','KKR'),\par
+(20,'2 CR','8 CR','CSK'),\par
+(21,'2 CR','14 CR','RCB'),\par
+(22,'2 CR','2 CR','MI'),\par
+(23,'20 L','1 CR','LSG'),\par
+(24,'2 CR','3 CR','KXIP'),\par
+(25,'20 L','50 L','KKR'),\par
+(26,'2 CR','6 CR','SRH'),\par
+(27,'20 L','40 L','SRH'),\par
+(28,'2 CR','14 CR','GT'),\par
+(29,'2 CR','4 CR','LSG'),\par
+(30,'2 CR','4 CR','DC'),\par
+(31,'2 CR','7 CR','DC'),\par
+(32,'2 CR','8 CR','RCB'),\par
+(33,'2 CR','3 CR','CSK'),\par
+(34,'2 CR','4 CR','KKR'),\par
+(35,'2 CR','3 CR','GT'),\par
+(36,'2 CR','7 CR','RR'),\par
+(37,'2 CR','5 CR','GT'),\par
+(38,'2 CR','2 CR','DC'),\par
+(39,'2 CR','5 CR','KXIP'),\par
+(40,'2 CR','5 CR','DC'),\par
+(41,'20 L','70 L','RCB'),\par
+(42,'2 CR','6 CR','SRH'),\par
+(43,'20 L','20 L','RR'),\par
+(44,'20 L','30 L','KKR'),\par
+(45,'2 CR','7 CR','DC'),\par
+(46,'2 CR','7 CR','KKR'),\par
+(47,'2 CR','3 CR','DC'),\par
+(48,'2 CR','3 CR','RR'),\par
+(49,'2 CR','7 CR','GT'),\par
+(50,'2 CR','9 CR','KKR'),\par
+(51,'2 CR',' CR','KKR'),\par
+(52,'20 L','5 CR','MI'),\par
+(53,'2 CR','4 CR','RCB'),\par
+(54,'2 CR','11 CR','RCB'),\par
+(55,'2 CR','15 CR','RCB'),\par
+(56,'2 CR','3 CR','RR'),\par
+(57,'2 CR','6 CR','KKR'),\par
+(58,'2 CR','3 CR','DC'),\par
+(59,'2 CR','5 CR','GT'),\par
+(60,'2 CR','12 CR','DC'),\par
+(61,'2 CR','2 CR','CSK'),\par
+(62,'2 CR','17 CR','RCB'),\par
+(63,'2 CR','6 CR','LSG'),\par
+(64,'2 CR','5 CR','GT'),\par
+(65,'2 CR','2 CR','CSK'),\par
+(66,'2 CR','9 CR','DC'),\par
+(67,'2 CR','17 CR','RCB'),\par
+(68,'2 CR','13 CR','MI'),\par
+(69,'2 CR','9 CR','CSK'),\par
+(70,'2 CR','15 CR','KKR'),\par
+(71,'2 CR','5 CR','KKR'),\par
+(72,'2 CR','4 CR','SRH'),\par
+(73,'2 CR','6 CR','DC'),\par
+(74,'2 CR','4 CR','DC'),\par
+(75,'2 CR','5 CR','KXIP'),\par
+(76,'2 CR','6 CR','DC'),\par
+(77,'2 CR','10 CR','RR'),\par
+(78,'2 CR','10 CR','RR'),\par
+(79,'2 CR','7 CR','CSK'),\par
+(80,'2 CR','11 CR','MI'),\par
+(81,'2 CR','6 CR','SRH'),\par
+(82,'2 CR','4 CR','CSK'),\par
+(83,'2 CR','2 CR','KXIP'),\par
+(84,'2 CR','7 CR','LSG'),\par
+(85,'2 CR','6 CR','SRH'),\par
+(86,'2 CR','8 CR','RCB'),\par
+(87,'2 CR','8 CR','RCB');\par
+\par
+select * from ipl_players;\par
+\par
+select * from ipl_auction;\par
+\par
+select player_name,playing_role from ipl_players;\par
+\par
+select * from ipl_players limit 15;\par
+\par
+select count(*) from ipl_players;\par
+\par
+select selling_price from ipl_auction where selling_price <> "17 CR";\par
+\par
+select sum(selling_price) as total from ipl_auction;\par
+\par
+select * from ipl_players where player_name like 'a%' limit 10;\par
+\par
+select playing_role,count(playing_role) count from ipl_players group by playing_role;\par
+\par
+select team, count(team) no_of_players_in_team from ipl_auction group by team;\par
+\par
+select * from ipl_players order by player_name;\par
+\par
+select * from ipl_players order by player_name limit 20;\par
+\par
+select * from ipl_players order by player_name desc;\par
+\par
+select * from ipl_players order by player_name desc limit 20;\par
+\par
+select player_id,player_name from ipl_players order by player_name desc;\par
+\par
+select player_id,player_name from ipl_players order by player_name desc limit 20;\par
+\par
+select * from ipl_players where player_name in ("virat kohli") ;\par
+\par
+select ipl_players.player_name,\par
+ ipl_players.playing_role,\par
+ ipl_auction.base_price,\par
+ ipl_auction.selling_price,\par
+ ipl_auction.team\par
+ from ipl_players\par
+ inner join ipl_auction \par
+ on ipl_players.player_id=ipl_auction.player_id;\par
+ \par
+ select ipl_players.player_name,\par
+ ipl_players.playing_role,\par
+ ipl_auction.selling_price,\par
+ ipl_auction.team\par
+ from ipl_players\par
+ left join ipl_auction \par
+ on ipl_players.player_id=ipl_auction.player_id;\par
+ \par
+ select ipl_players.player_id,\par
+ ipl_players.player_name,\par
+ ipl_players.playing_role,\par
+ ipl_auction.base_price,\par
+ ipl_auction.selling_price,\par
+ ipl_auction.team\par
+ from ipl_players\par
+ right join ipl_auction \par
+ on ipl_players.player_id=ipl_auction.player_id;\par
+ \par
+ alter table ipl_auction add column career_runs int;\par
+ \par
+ alter table ipl_auction drop column career_runs; \par
+ \par
+ update ipl_auction set selling_price = "20 CR" where player_id = 1;\par
+ \par
+ \par
+}
+ 
